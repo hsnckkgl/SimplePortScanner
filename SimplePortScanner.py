@@ -24,7 +24,7 @@ t1 = datetime.now()
 # We also put in some error handling for catching errors
 
 try:
-    for port in range(1,1025):  
+    for port in range(1,65535):  
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex((remoteServerIP, port))
         if result == 0:
